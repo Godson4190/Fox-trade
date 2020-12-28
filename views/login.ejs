@@ -1,0 +1,39 @@
+<%- include ("./partials/header") %>
+<div class="intro">
+    <h3>login</h3>
+    <div class="intro-ul">
+        <ul>
+            <li><a class="button-complete href="><i class="fab fa-facebook-f"></i></a></li>
+            <li><a class="button-complete href="><i class="fab fa-twitter"></i></a></li>
+            <li><a class="button-complete href="><i class="fab fa-instagram"></i></a></li>
+            <li><a class="button-complete href="><i class="fab fa-linkedin"></i></a></li>
+            <li><a class="button-complete href="><i class="fab fa-whatsapp"></i></a></li>
+        </ul>
+    </div>
+</div>
+</div>
+</header>
+<div>
+    <div class="container">
+        <div class="form-bg">
+            <div class="form-main">
+                <div class="form-content">
+                    <form action="/login" method="POST">
+                        <div class="form-control">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" required>
+                        </div>
+                        <div class="form-control">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" required>
+                        </div>
+                        <button type="submit" class="button-main button-form"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <hr class="hr-form">
+                    <a class="submit-extra button-main button-form" href="/register">sign up</a>
+                    <a class="submit-extra button-main button-form" style="float: right;" href="/forgot">forgot password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<%- include ("./partials/footer") %>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fox Trade</title>
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/fonts/css/all.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/button.css">
+    <link rel="stylesheet" href="/stylesheets/modal.css">
+</head>
+<body>
+    <% if(error && error.length > 0){ %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+            <a href="#" class="alert-close"><i class="fas fa-times"></i></a>
+        </div>
+    <% } %>
+    <% if(success && success.length > 0){ %>
+        <div class="alert alert-success" role="alert">
+            <%= success %>
+            <a href="#" class="alert-close"><i class="fas fa-times"></i></a>
+        </div>
+    <% } %>
+    <div>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-bars" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+            <header>
+                <% if(!currentUser){ %>
+                    Fox Trade
+                <% } else { %>
+                    <%= currentUser.username %>
+                <% } %>
+            </header>
+            <ul>
+                <li class="dash">
+                    <abbr title="Dashboard"><a href="/dashboard"><i class="fas fa-home"></i><span class="link-text">Dashboard</span></a></abbr>
+                </li>
+
+                <li class="drop">
+                    <abbr title="Investment"><a href="#"><i class="fas fa-download"></i><span class="link-text">investment</span> <i class="fas fa-caret-down"></i></a></abbr>
+                    <ul class="dropdown">
+                        <li><abbr title="New Investment"><a href="/dashboard/investment#newinvest">. new investment</a></abbr></li>
+                        <li><abbr title="Investment History"><a href="/dashboard/investment#investhistory">. investment history</a></abbr></li>
+                    </ul>
+                </li>
+                
+                <li class="drop-two">
+                    <abbr title="Withdrawal"><a href="#"><i class="fas fa-upload"></i><span class="link-text">withdrawal</span> <i class="fas fa-caret-down"></i></a></abbr>
+                    <ul class="dropdown">
+                        <li><abbr title="New Withdrawal"><a href="/dashboard/withdrawal#newwithdraw">. new withdrawal</a></abbr></li>
+                        <li><abbr title="Withdrawal History"><a href="/dashboard/withdrawal#withdrawhistory">. withdrawal history</a></abbr></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <section> 
+            <div class="fixed-top container container-nav">
+                <div class="navbar">
+                    <a class="navbar-logo" href="/"></a> 
+                    <div class="navbar-ul">                          
+                        <a class="logout" href="/logout">logout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">

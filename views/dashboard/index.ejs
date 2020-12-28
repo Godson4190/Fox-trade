@@ -1,0 +1,76 @@
+<%- include ("../partials/head") %>
+<div class="section">
+    <p class="section-header">dashboard</p>
+    <div class="account">
+        <div class="account-card">
+            <div class="account-card-plan">
+                <div>
+                    <h4>roi</h4>
+                    <p>As of <%= currentUser.created.toUTCString() %></p>
+                </div>
+                <a href="">$0</a>                    
+            </div>
+            <div class="plan-border" style="background: #2196f3;"></div>
+            <p>investment plan</p>
+        </div>
+
+        <div class="account-card">
+            <div class="account-card-plan">
+                <div>
+                    <h4>account balance</h4>
+                    <p>As of <%= currentUser.created.toUTCString() %></p>
+                </div>
+                <a href="">$0</a>                    
+            </div>
+            <div class="plan-border" style="background: #f4516c;"></div>
+            <p>investment plan</p>
+        </div>
+
+        <div class="account-card">
+            <div class="account-card-plan">
+                <div>
+                    <h4>invested amount</h4>
+                    <p>As of <%= currentUser.created.toUTCString() %></p>
+                </div>
+                <a href="">$0</a>                    
+            </div>
+            <div class="plan-border" style="background: #33ff33;"></div>
+            <p>investment plan</p>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <p class="section-header">investment plans</p>
+    <div class="plan">
+        <div class="plan-card">
+            <h4 style="color: silver;">silver</h4>
+            <p>14.0% roi(hourly)</p>
+            <p>Minimium Investment: $300</p>
+            <p>Maximium Investment: $3000</p>
+            <p>Trade Duration: 24 hours</p>
+            <div class="plan-border" style="background: silver;"></div>
+            <a class="button-plan" href="/dashboard/silver" style="background: silver;">deposit</a>
+        </div>
+
+        <div class="plan-card">
+            <h4 style="color: gold;">gold</h4>
+            <p>34.0% roi(hourly)</p>
+            <p>Minimium Investment: $3100</p>
+            <p>Maximium Investment: $8000</p>
+            <p>Trade Duration: 24 hours</p>
+            <div class="plan-border" style="background: gold;"></div>
+            <a class="button-plan" href="/dashboard/gold" style="background: gold;">deposit</a>
+        </div>
+
+        <div class="plan-card">
+            <h4 style="color: #2196f3;">diamond</h4>
+            <p>60.0% roi(hourly)</p>
+            <p>Minimium Investment: $8100</p>
+            <p>Maximium Investment: $15000</p>
+            <p>Trade Duration: 48 hours</p>
+            <div class="plan-border" style="background: #2196f3;"></div>
+            <a class="button-plan" href="/dashboard/diamond" style="background:  #2196f3;">deposit</a>
+        </div>
+    </div>
+</div>
+<%- include ("../partials/foot") %>

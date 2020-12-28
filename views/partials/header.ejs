@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fox Trade</title>
+        <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="/stylesheets/animate.css">
+        <link rel="stylesheet" href="/fonts/css/all.css">
+        <link rel="stylesheet" href="/stylesheets/app.css">
+        <link rel="stylesheet" href="/stylesheets/button.css">
+        <link rel="stylesheet" href="/stylesheets/modal.css">
+        <script src="/script/jquery-3.4.1.min.js"></script>
+        <script src="/script/setting2.js.download"></script>
+        <script src="/script/wow.js.download"></script>
+        <script src="/script/wow.min.js.download"></script>
+    </head>
+    <body style="zoom: 1;">
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger zoomIn wow" role="alert">
+                <%= error %>
+                <a href="#" class="alert-close"><i class="fas fa-times"></i></a>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success zoomIn wow" role="alert">
+                <%= success %>
+                <a href="#" class="alert-close"><i class="fas fa-times"></i></a>
+            </div>
+        <% } %>
+        <header>
+            <nav class="fixed-top">
+                <div class="navbar">
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+                    <a class="navbar-logo fadeInLeft wow" href="/">Fox Trade</a>
+                    <ul class="fadeInRight wow">
+                        <li><a href="/">home</a></li>
+                        <li><a href="/about">about</a></li>
+                        <li><a href="/contact">contact</a></li>
+                        <% if(!currentUser){ %>
+                            <li><a href="/login">login</a></li>
+                        <% } else { %>
+                            <li><a href="/logout">logout</a></li>
+                        <% } %> 
+                    </ul>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="intro fadeInLeft wow">

@@ -1,0 +1,75 @@
+<%- include ("../partials/head") %>
+<div class="section" id="newinvest">
+    <p class="section-header">new investment</p>
+    <div class="plan">
+        <div class="plan-card">
+            <h4 style="color: silver;">silver</h4>
+            <p>14.0% roi(hourly)</p>
+            <p>Minimium Investment: $300</p>
+            <p>Maximium Investment: $3000</p>
+            <p>Trade Duration: 24 hours</p>
+            <div class="plan-border" style="background: silver;"></div>
+            <a class="button-plan" href="/dashboard/silver" style="background: silver;">deposit</a>
+        </div>
+
+        <div class="plan-card">
+            <h4 style="color: gold;">gold</h4>
+            <p>34.0% roi(hourly)</p>
+            <p>Minimium Investment: $3100</p>
+            <p>Maximium Investment: $8000</p>
+            <p>Trade Duration: 24 hours</p>
+            <div class="plan-border" style="background: gold;"></div>
+            <a class="button-plan" href="/dashboard/gold" style="background: gold;">deposit</a>
+        </div>
+
+        <div class="plan-card">
+            <h4 style="color: #2196f3;">diamond</h4>
+            <p>60.0% roi(hourly)</p>
+            <p>Minimium Investment: $8100</p>
+            <p>Maximium Investment: $15000</p>
+            <p>Trade Duration: 48 hours</p>
+            <div class="plan-border" style="background: #2196f3;"></div>
+            <a class="button-plan" href="/dashboard/diamond" style="background:  #2196f3;">deposit</a>
+        </div>
+    </div>
+</div>
+<div class="section" id="investhistory">
+    <p class="section-header">investment history</p>
+    <div class="form-main">
+        <div class="form-history">                                   
+            <p class="form-p">investment history</p>
+            <hr class="hr-form">
+            <div class="history-input">
+                <div style="margin: 20px 0;">
+                    <h4>S/N</h4>
+                </div>
+                <div style="margin: 20px 0;">
+                    <h4>Date & Time</h4>
+                    <div class="form-h4"></div>
+                </div>
+                <div style="margin: 20px 0;">
+                    <h4>Package</h4>
+                    <div class="form-h4"></div>
+                </div>
+                <div style="margin: 20px 0;">
+                    <h4>Amount</h4>
+                    <div class="form-h4"></div>
+                </div>
+                <div style="margin: 20px 0;">
+                    <h4>Commission</h4>
+                    <div class="form-h4"></div>
+                </div>
+                <div style="margin: 20px 0;">
+                    <h4>Payout</h4>
+                    <div class="form-h4"></div>
+                </div>
+                <div style="margin: 20px 0;">
+                    <h4>Status</h4>
+                    <div class="form-h4"></div>
+                </div>
+            </div>
+            <p>No history at the moment</p>
+        </div>
+    </div>
+</div>
+<%- include ("../partials/foot") %>

@@ -1,0 +1,33 @@
+<%- include ("./partials/header") %>
+<div class="intro">
+    <h3>Forgot password</h3>
+    <div class="intro-ul">
+        <ul>
+            <li><a class="button-complete href="><i class="fab fa-facebook-f"></i></a></li>
+            <li><a class="button-complete href="><i class="fab fa-twitter"></i></a></li>
+            <li><a class="button-complete href="><i class="fab fa-instagram"></i></a></li>
+            <li><a class="button-complete href="><i class="fab fa-linkedin"></i></a></li>
+            <li><a class="button-complete href="><i class="fab fa-whatsapp"></i></a></li>
+        </ul>
+    </div>
+</div>
+</div>
+</header>
+<div>
+    <div class="container">
+        <div class="form-bg">
+            <div class="form-main">
+                <div class="form-content">
+                    <form action="/forgot" method="POST">
+                        <legend>Forgot Password</legend>
+                        <div class="form-control">
+                            <label for="username">Email</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <button type="submit" class="button-main button-form"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<%- include ("./partials/footer") %>

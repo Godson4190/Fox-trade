@@ -1,0 +1,76 @@
+<%- include ("../partials/head") %>
+<div class="section" id="newwithdraw">
+    <p class="section-header">new withdrawal</p>
+    <div class="form-bg">
+        <div class="form-main">
+            <div class="form-history">
+                <form action="">
+                    <div class="form-control">
+                        <label for="method">Select Withdrawal Method</label>
+                        <select name="method" required>
+                            <option>Bitcoin</option>
+                            <option>Litecoin</option>
+                            <option>Ethereum</option>
+                            <option>Bitcoin Cash</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label for="">Account Balance</label>
+                        <div class="form-div">$</div>
+                    </div>
+                    <div class="form-control">
+                        <label for="">Amount</label>
+                        <input type="number" placeholder="$">
+                    </div>
+                    <div class="form-control">
+                        <label for="">Wallet Address</label>
+                        <input type="text">
+                    </div>
+                    <hr class="hr-form">
+                    <button type="submit" class="button-main button-form"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="withdrawhistory">
+    <p class="section-header">withdrawal history</p>
+    <div class="form-main">
+        <div class="form-history">                                   
+            <p class="form-p">withdrawal history</p>
+            <hr class="hr-form">
+            <div class="history-input">
+                <div style="margin: 20px 0;">
+                    <h4>S/N</h4>
+                </div>
+                <div style="margin: 20px 0;">
+                    <h4>Date & Time</h4>
+                    <div class="form-h4"></div>
+                </div>
+                <div style="margin: 20px 0;">
+                    <h4>Package</h4>
+                    <div class="form-h4"></div>
+                </div>
+                <div style="margin: 20px 0;">
+                    <h4>Amount</h4>
+                    <div class="form-h4"></div>
+                </div>
+                <div style="margin: 20px 0;">
+                    <h4>Payout</h4>
+                    <div class="form-h4"></div>
+                </div>
+                <div style="margin: 20px 0;">
+                    <h4>Status</h4>
+                    <div class="form-h4"></div>
+                </div>
+                <div style="margin: 20px 0;">
+                    <h4>Date Approved</h4>
+                    <div class="form-h4"></div>
+                </div>
+            </div>
+            <p>No history at the moment</p>
+        </div>
+    </div>
+</div>
+<%- include ("../partials/foot") %>
