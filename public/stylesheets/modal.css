@@ -166,6 +166,10 @@ legend {
         width: 95%;
         padding: 10px;
     }
+    .form-contact {
+        width: 95%;
+        padding: 10px;
+    }
     .main-input { grid-template-columns: auto; }
 }
 @media (max-width: 479px) {
@@ -188,6 +192,9 @@ legend {
         font-size: 10px;
     }
     .form-control select {
+        font-size: 10px;
+    }
+    .terms a {
         font-size: 10px;
     }
     .submit-extra {
