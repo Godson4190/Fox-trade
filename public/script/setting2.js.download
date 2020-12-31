@@ -1,0 +1,68 @@
+$(document).ready(function(){
+	wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+
+	var percent 	= [5,7,9];
+	var minMoney 	= [20,1000,5000];
+	var maxMoney	= [999,4999,50000];
+	var Hourly		= [0.21,0.30,0.38];
+	$("#amount").val(minMoney[0]);
+	
+	//Calculator
+	function calc(){
+		amount = parseFloat($("#amount").val());
+		id = -1;
+		var length = percent.length;
+		var i = 0;
+		do {
+			if(minMoney[i] <= amount && amount <= maxMoney[i]){
+				id = i;
+				i = i + length;
+			}
+			i++
+		}
+		while(i < length)
+		
+		if(id != -1){
+			profitDaily = amount / 100 * percent[id];
+			profitDaily = profitDaily.toFixed(3);
+			profitHourly = profitDaily / 24;
+			profitHourly = profitHourly.toFixed(3);
+			profitMonthly = profitDaily * 30;
+			profitMonthly = profitMonthly.toFixed(3);
+
+
+			if(amount < minMoney[id] || isNaN(amount) == true){
+				$("#profitHourly").text("Error!");
+				$("#profitDaily").text("Error!");
+				$("#profitMonthly").text("Error!");
+			} else {
+				$("#profitHourly").text(profitHourly);
+				$("#profitDaily").text(profitDaily);
+				$("#profitMonthly").text(profitMonthly);
+			}
+		} else {
+			$("#profitHourly").text("Error!");
+			$("#profitDaily").text("Error!");
+			$("#profitMonthly").text("Error!");
+		}
+	}
+	if($("#amount").length){
+		calc();
+	}
+	$("#amount").keyup(function(){
+		calc();
+	});
+	//Animate scroll
+	if($(".wow").length){
+		new WOW().init();
+	}
+});

@@ -1,0 +1,440 @@
+body {
+    background-color: rgba(9, 97, 170, 0.04);
+}
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 2px;
+    text-transform: capitalize;
+    display: inline-block;
+}
+.alert-close {
+    color: white;
+    margin-left: 15px;
+}
+.alert-danger {
+    background: #f44336;
+}
+.alert-success {
+    background: #4caf50;
+}
+header {
+    background-image: url(/images/bitcoin.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    user-select: none;
+}
+section {
+    margin-top: 3rem;
+    width: 100%;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.container {
+    padding: 0rem 10rem;
+    width: 100%;
+}
+.gray-bg { background: #f0f3f4; }
+.container-navbar { background:  rgba(9, 97, 170, 0.6); }
+.navbar {
+    background:  rgba(9, 97, 170, 0.6);
+    padding: 0.5rem 0;
+    user-select: none;
+}
+#check { display: none; }
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+.navbar-logo {
+    margin-left: 10rem;
+    font-size: 30px;
+    color: white;
+    text-transform: capitalize;
+}
+.navbar ul {
+    float: right;
+    margin-right: 10rem;
+    display: flex;
+    flex-flow: row;
+    border: none;
+}
+.navbar ul li {
+    padding: 0.5rem 0rem;
+    text-transform: capitalize;
+}
+.navbar ul li a {
+    padding: 0.5rem 2.5rem;
+    font-size: 18px;
+    color: #fff;
+}
+.navbar ul li.active { background: rgba(9, 97, 170, 0.6); }
+.navbar ul li:hover{ background: rgba(9, 97, 170, 0.9); }
+.intro {
+    color: white;
+    padding: 5rem 0;
+    user-select: none;
+}
+.intro h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0a6fc2;
+    padding: 0.5rem 0;
+}
+.intro h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 0.5rem 0;
+    padding-bottom: 1rem;
+}
+.intro-ul ul li {
+    display: inline-block;
+    padding: 0.5rem 0;
+    padding-right: 1.25rem;
+}
+.intro-ul ul li a {
+    color: white;
+    padding: 5px;
+    box-shadow: 0px 0px 2px 2px rgba(33, 150, 243, 0.3);
+    background: none;
+    font-size: 25px;
+}
+.about {
+    display: flex;
+    flex-flow: row;
+    user-select: none;
+}
+.about-text {
+    padding-right: 1rem;
+    overflow: hidden;
+    color:  #3c3d44;
+}
+.about-text h2 {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+.about-text p {
+    padding-bottom: 0.5rem;
+    font-size: 15px;
+}
+.learn-more { padding: 1rem 0; }
+.about-img { width: 500px; }
+.why-us h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color:  #3c3d44;
+    user-select: none;
+}
+.why-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+    user-select: none;
+}
+.why-grid-card {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    box-shadow: 0px 0px 2px 2px rgba(9, 97, 170, 0.2);
+    text-align: center;
+    color:  #3c3d44;
+}
+.why-grid-card a {
+    font-size: 4rem;
+    color: #2196f3;
+}
+.why-grid-card p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.plans {
+    background: #22262a;
+    padding: 2.5rem 0;
+    color:  #3c3d44;
+    user-select: none;
+}
+.plans .container h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: white;
+}
+.plan {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.plan-card {
+    box-shadow: 0px 0px 2px 2px rgba(9, 97, 170, 0.1);
+    padding: 2rem;
+    text-transform: capitalize;
+    background: white;
+}
+.plan-card h4 {
+    font-size: 1.5rem;
+    padding-bottom: 0.75rem;
+}
+.plan-card p {
+    font-size: 14px;
+    padding-bottom: 1rem;
+}
+.plan-border {
+    width: 100%;
+    height: 7px;
+    border-radius: 2px;
+    margin-bottom: 0.75rem;
+}
+.deposit { width: 100%; }
+.last-h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color:  #3c3d44;
+    user-select: none;
+}
+.recent {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    user-select: none;
+}
+.table {
+    box-shadow: 0px 0px 2px 2px rgba(9, 97, 170, 0.1);
+    margin-bottom: 2rem;
+    color:  #3c3d44;
+}
+.table-ul ul {
+    overflow: hidden;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    text-transform: capitalize;
+    border-top: 1px solid #e2e7e9;
+}
+.achievement {
+    padding: 2.5rem 0;
+    background: #4f5b63;
+    user-select: none;
+}
+.achievement-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+.achievement-grid-card {
+    margin-bottom: 2rem;
+    background: #d4dadd;
+    padding: 4rem;
+    box-shadow: 0px 0px 2px 2px rgba(9, 97, 170, 0.2);
+    color:  #3c3d44;
+}
+.achievement-grid-card span {
+    font-size: 4rem;
+    color: #2196f3;
+    font-weight: bold;
+}
+.achievement-grid-card p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #000;
+}
+.footer {
+    border-top: 1px solid #f2f2f2;
+    background: #4f5b63;
+    user-select: none;
+}
+.footer-navbar { padding: 0.5rem 0; }
+.footer-navbar a {
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+}
+@media (max-width: 1179px) {
+    .container { padding: 0rem 5rem; }
+    .navbar-logo { margin-left: 5rem; }
+    .navbar ul { margin-right: 5rem; }
+    .about-img { width: 400px; }
+}
+@media (max-width: 1079px) {
+    .container { padding: 0rem 2.5rem; }
+    .navbar-logo { margin-left: 2.5rem; }
+    .navbar ul { margin-right: 2.5rem; }
+    .about-img { width: 300px; }
+}
+@media (max-width: 979px) {
+    .container { padding: 0rem 2rem; }
+    .navbar-logo { margin-left: 2rem; }
+    .navbar ul { margin-right: 2rem; }
+    .about-img { width: 400px; }
+}
+@media (max-width: 879px) {
+    .container { padding: 0rem 1.4rem; }
+    .navbar-logo { margin-left: 1.4rem; }
+    .navbar ul { margin-right: 1.4rem; }
+    .about-img { width: 300px; }
+}
+@media (max-width: 824px) {
+    #check:checked ~ ul { left: 50%; }
+    .checkbtn {
+        display: block;
+        margin-right: 1.4rem;
+    }
+    .navbar ul {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #2c3e50;
+        left: -100%;
+        display: block;
+        text-align: left;
+        transition: all 0.5s;
+        z-index: 1111;
+        margin-top: 0.5rem;
+    }
+    .navbar ul li {
+        display: block;
+        margin: 1.5rem 0;
+    }
+    .navbar ul li:hover {
+        background: #243342;
+    }
+    .intro h1 {
+        font-size: 1.3rem;
+    }
+    .intro h3 {
+        font-size: 1rem;
+    }
+    .intro-ul ul li a {
+        font-size: 15px;
+    }
+    .about { flex-flow: column; }
+    .about-text { padding-right: 0; }
+    .about-text h2 {
+        font-size: 1.3rem;
+    }
+    .about-img { width: 100%; }
+    .why-grid { grid-template-columns: auto auto; }
+    .why-us h2 { font-size: 1.3rem; }
+    .why-grid-card a {
+        font-size: 2rem;
+    }
+    .why-grid-card p {
+        font-size: 1rem;
+    }
+    .achievement-grid { grid-template-columns: auto; }
+    .plans .container h2 {
+        font-size: 1.3rem;
+    }
+    .plan { flex-flow: column; }
+    .plan-card { margin-bottom: 1rem; }
+    .recent { grid-template-columns: auto; }
+    .table { margin-bottom: 2rem; }
+    .last-h2 {
+        font-size: 1.3rem;
+    }
+    .achievement-grid-card span {
+        font-size: 2rem;
+    }
+    .achievement-grid-card p {
+        font-size: 1rem;
+    }
+    .footer-navbar a { font-size: 1rem; }
+}
+@media (max-width: 679px) {
+    .navbar-logo { margin-left: 1rem; }
+    .checkbtn { margin-right: 1rem; }
+}
+@media (max-width: 479px) {
+    .container { padding: 0rem 1rem; }
+    #check:checked ~ ul { left: 0; }
+    .navbar ul {
+        width: 90%;
+        height: 100%;
+        left: 100%;
+        text-align: center;
+    }
+    .navbar ul li a {
+        font-size: 0.7rem;
+    }
+    .intro {
+        padding-bottom: 2.5rem;
+    }
+    .intro h1 {
+        font-size: 1rem;
+    }
+    .intro h3 {
+        font-size: 0.7rem;
+    }
+    .about-text h2 {
+        font-size: 1rem;
+    }
+    .about-text p {
+        font-size: 0.7rem;
+    }
+    .why-us h2 { font-size: 1rem; }
+    .why-grid-card a {
+        font-size: 1.5rem;
+    }
+    .why-grid-card p {
+        font-size: 0.7rem;
+    }
+    .plans .container h2 {
+        font-size: 1rem;
+    }
+    .plan-card p {
+        font-size: 0.7rem;
+    }
+    .last-h2 {
+        font-size: 1rem;
+    }
+    .achievement-grid-card span {
+        font-size: 1.5rem;
+    }
+    .achievement-grid-card p {
+        font-size: 0.7rem;
+    }
+    .intro-ul ul li { padding-right: 0.5rem; }
+    .why-grid { grid-template-columns: auto; }
+    .why-grid-card { padding: 1rem; }
+    .achievement-grid-card { padding: 2rem; }
+    .table-ul li {
+        font-size: 0.7rem;
+    }
+    .footer-navbar a { font-size: 0.8rem; }
+}
