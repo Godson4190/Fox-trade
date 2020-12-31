@@ -79,7 +79,7 @@ app.use("/dashboard", dashboardRoutes);
 // ====================================================================================================
 // SERVER STARTUP
 // ====================================================================================================
-
-app.listen(process.env.PORT || 3000, process.env.IP, function(){
-    console.log("Server Startup!!");
+const port = process.env.PORT || 3000;
+app.listen(port, function(){
+    console.log(`Serving on port ${port}`);
 });
