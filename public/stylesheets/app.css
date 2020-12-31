@@ -11,14 +11,15 @@ body {
 }
 .alert {
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 100%;
+    left: 100%;
     color: white;
-    transform: translate(-50%, -50%);
+    transform: translate(-100%, -100%);
     padding: 10px;
     border-radius: 2px;
     text-transform: capitalize;
     display: inline-block;
+    width: 100%;
 }
 .alert-close {
     color: white;
