@@ -11,6 +11,8 @@ const flash         = require("connect-flash");
 const User          = require("./models/user");
 const session       = require("express-session");
 const methodOverride = require("method-override");
+const async = require('async');
+const nodemailer = require('nodemailer');
 require('dotenv').config();
     
 const cookieParser = require("cookie-parser");
@@ -20,7 +22,7 @@ const dashboardRoutes = require("./routes/dashboards");
 const MongoDBStore = require('connect-mongo')(session);
 // assign mongoose promise library and connect to database
 mongoose.Promise = global.Promise;
-const dbUrl = "mongodb://localhost:27017/db_trade-app";//process.env.DB_URL || //"mongodb://localhost:27017/db_trade-app"//;
+const dbUrl = process.env.DB_URL; //|| //"mongodb://localhost:27017/db_trade-app"//;
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
