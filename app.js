@@ -20,9 +20,9 @@ const cookieParser = require("cookie-parser");
 const indexRoutes = require("./routes/index");
 const dashboardRoutes = require("./routes/dashboards");
 const MongoDBStore = require('connect-mongo')(session);
-// assign mongoose promise library and connect to database
-mongoose.Promise = global.Promise;
-const dbUrl = process.env.DB_URL; //|| //"mongodb://localhost:27017/db_trade-app"//;
+
+const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/db_trade-app";
+
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -39,9 +39,10 @@ app.use(cookieParser("secret"));
 app.locals.moment = require("moment");
 
 // PASSPORT CONFIGURATION
+const secret = process.env.SECRET || "this trade platform is really great!";
 const store = new MongoDBStore({
     url: dbUrl,
-    secret: 'this trade platform is really great!',
+    secret,
     touchAfter: 24 * 60 * 60
 });
 store.on("error", function (e) {
@@ -50,7 +51,7 @@ store.on("error", function (e) {
 const sessionConfig = {
     store,
     name: 'session',
-    secret: 'this trade platform is really great!',
+    secret,
     resave: false,
     saveUninitialized: false,
     cookie: {
