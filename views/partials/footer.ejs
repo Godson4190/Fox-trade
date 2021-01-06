@@ -2,7 +2,7 @@
         <footer class="footer">
             <div class="container">
                 <div class="footer-navbar">
-                    <a href="/">&copy Fox Trade. All rights reserved. |</a>
+                    <a href="/">&copy Crypto Exchange. All rights reserved. |</a>
                     <a href="/policy">t&c</a>
                 </div>
             </div>
@@ -10,7 +10,6 @@
         <script src="/fonts/js/all.js"></script>
         <script src="/script/alert.js"></script>
         <script type="text/javascript">
-        
             var allImages = [ 
                 'url(/images/bitcoin.jpeg)',
                 'url(/images/cryptocurrencies.jpg)',
@@ -18,18 +17,14 @@
             ],
             startPosition = 0,
             interval = setInterval(imageSlide, 5000),
-            imageHandler = document.querySelector("header");  
-            //Image slider
+            imageHandler = document.querySelector("header");
             function imageSlide() {
-                //change the backgroundImage to the array of allImages
-                imageHandler.style.backgroundImage = allImages[startPosition],
-                //increments the counter
+                imageHandler.style.backgroundImage = allImages[startPosition];
                 startPosition++;
-                //repeat the loop
                 if(startPosition >= allImages.length){
                     startPosition = 0;
                 }
-            };
+            }
         </script>
     </body>
 </html>
