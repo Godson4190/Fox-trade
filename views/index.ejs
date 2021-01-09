@@ -68,10 +68,24 @@
 <h2 class="fadeInDown wow">investment plans</h2>
 <div class="plan">
     <div class="plan-card pulse wow">
-        <h4 style="color: silver;">silver</h4>
+        <h4 style="color: #CD7F32;">bronze</h4>
         <p>14.0% roi(hourly)</p>
-        <p>Minimium Investment: $300</p>
-        <p>Maximium Investment: $3000</p>
+        <p>Minimium Investment: $50</p>
+        <p>Maximium Investment: $300</p>
+        <p>Trade Duration: 24 hours</p>
+        <div class="plan-border" style="background: #CD7F32;"></div>
+        <% if(!currentUser){ %>
+            <a class="button-plan" href="/login" style="background: #CD7F32;">deposit</a>
+        <% } else { %>
+            <a class="button-plan" href="/dashboard/bronze" style="background: #CD7F32;">deposit</a>
+        <% } %>
+    </div>
+
+    <div class="plan-card">
+        <h4 style="color: silver;">silver</h4>
+        <p>34.0% roi(hourly)</p>
+        <p>Minimium Investment: $500</p>
+        <p>Maximium Investment: $1200</p>
         <p>Trade Duration: 24 hours</p>
         <div class="plan-border" style="background: silver;"></div>
         <% if(!currentUser){ %>
@@ -83,10 +97,10 @@
 
     <div class="plan-card">
         <h4 style="color: gold;">gold</h4>
-        <p>34.0% roi(hourly)</p>
-        <p>Minimium Investment: $3100</p>
-        <p>Maximium Investment: $8000</p>
-        <p>Trade Duration: 24 hours</p>
+        <p>60.0% roi(hourly)</p>
+        <p>Minimium Investment: $1500</p>
+        <p>Maximium Investment: $3000</p>
+        <p>Trade Duration: 48 hours</p>
         <div class="plan-border" style="background: gold;"></div>
         <% if(!currentUser){ %>
             <a class="button-plan" href="/login" style="background: gold;">deposit</a>
@@ -94,18 +108,47 @@
             <a class="button-plan" href="/dashboard/gold" style="background: gold;">deposit</a>
         <% } %>
     </div>
-
-    <div class="plan-card">
+</div>
+<div class="plan">
+    <div class="plan-card pulse wow">
         <h4 style="color: #2196f3;">diamond</h4>
-        <p>60.0% roi(hourly)</p>
-        <p>Minimium Investment: $8100</p>
-        <p>Maximium Investment: $15000</p>
+        <p>71.0% roi(hourly)</p>
+        <p>Minimium Investment: $5000</p>
+        <p>Maximium Investment: $8000</p>
         <p>Trade Duration: 48 hours</p>
         <div class="plan-border" style="background: #2196f3;"></div>
         <% if(!currentUser){ %>
             <a class="button-plan" href="/login" style="background: #2196f3;">deposit</a>
         <% } else { %>
             <a class="button-plan" href="/dashboard/diamond" style="background: #2196f3;">deposit</a>
+        <% } %>
+    </div>
+
+    <div class="plan-card">
+        <h4 style="color: #E5E4E2;">platinium</h4>
+        <p>74.0% roi(hourly)</p>
+        <p>Minimium Investment: $8100</p>
+        <p>Maximium Investment: $12000</p>
+        <p>Trade Duration: 48 hours</p>
+        <div class="plan-border" style="background: #E5E4E2;"></div>
+        <% if(!currentUser){ %>
+            <a class="button-plan" href="/login" style="background: #E5E4E2;">deposit</a>
+        <% } else { %>
+            <a class="button-plan" href="/dashboard/platinium" style="background: #E5E4E2;">deposit</a>
+        <% } %>
+    </div>
+
+    <div class="plan-card">
+        <h4 style="color: #000;">ultimate</h4>
+        <p>85.0% roi(hourly)</p>
+        <p>Minimium Investment: $12100</p>
+        <p>Maximium Investment: $15000</p>
+        <p>Trade Duration: 72 hours</p>
+        <div class="plan-border" style="background: #000;"></div>
+        <% if(!currentUser){ %>
+            <a class="button-plan" href="/login" style="background: #000;">deposit</a>
+        <% } else { %>
+            <a class="button-plan" href="/dashboard/ultimate" style="background: #000;">deposit</a>
         <% } %>
     </div>
 </div>

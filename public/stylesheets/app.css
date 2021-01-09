@@ -23,7 +23,7 @@ body {
 }
 .alert-close {
     color: white;
-    margin-left: 15px;
+    float: right;
 }
 .alert-danger {
     background: #f44336;
@@ -196,8 +196,10 @@ section {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+    padding-bottom: 1rem;
 }
 .plan-card {
+    width: 250px;
     box-shadow: 0px 0px 2px 2px rgba(9, 97, 170, 0.1);
     padding: 2rem;
     text-transform: capitalize;
@@ -363,7 +365,7 @@ section {
         font-size: 1.3rem;
     }
     .plan { flex-flow: column; }
-    .plan-card { margin-bottom: 1rem; }
+    .plan-card { margin-bottom: 1rem; width: 100%; }
     .recent { grid-template-columns: auto; }
     .table { margin-bottom: 2rem; }
     .last-h2 {

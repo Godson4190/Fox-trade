@@ -10,6 +10,9 @@ router.get('/investment', isLoggedIn, function(req, res) {
 router.get('/withdrawal', isLoggedIn, function(req, res) {
     res.render('dashboard/withdrawal');
 });
+router.get('/bronze', isLoggedIn, function(req, res) {
+    res.render('dashboard/bronze');
+});
 router.get('/silver', isLoggedIn, function(req, res) {
     res.render('dashboard/silver');
 });
@@ -18,6 +21,12 @@ router.get('/gold', isLoggedIn, function(req, res) {
 });
 router.get('/diamond',isLoggedIn, function(req, res) {
     res.render('dashboard/diamond');
+});
+router.get('/platinium', isLoggedIn, function(req, res) {
+    res.render('dashboard/platinium');
+});
+router.get('/ultimate', isLoggedIn, function(req, res) {
+    res.render('dashboard/ultimate');
 });
 function isLoggedIn (req, res, next){
     if(req.isAuthenticated()){

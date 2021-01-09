@@ -20,7 +20,7 @@
 }
 .alert-close {
     color: white;
-    margin-left: 15px;
+    float: right;
 }
 .alert-danger {
     background: #f44336;
@@ -229,13 +229,15 @@ section {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+    padding-bottom: 1rem;
     user-select: none;
 }
 .plan-card {
+    width: 250px;
     box-shadow: 0px 0px 2px 2px rgba(9, 97, 170, 0.1);
     padding: 2rem;
     text-transform: capitalize;
-    color: #575962;
+    background: white;
 }
 .plan-card h4 {
     font-size: 1.5rem;
@@ -276,16 +278,16 @@ footer {
         margin-bottom: 1rem;
     }
 }
+@media (max-width: 1114px) {
+    .plan { flex-flow: column; }
+    .plan-card { margin-bottom: 1rem; width: 100%; }
+}
 @media (max-width: 1079px) {
     label #btn { margin-left: 2.5rem; }
     .container { padding: 0rem 2.5rem; }
     #check:checked ~ section .navbar-ul {
         margin-right: 13rem;
     }
-}
-@media (max-width: 1054px) {
-    .plan { flex-flow: column; }
-    .plan-card { margin-bottom: 1rem; }
 }
 @media (max-width: 979px) {
     label #btn { margin-left: 2rem; }
