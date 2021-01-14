@@ -61,7 +61,7 @@ router.post("/login", passport.authenticate("local",
       successRedirect: "/dashboard",
       failureRedirect: "/login",
       failureFlash: true,
-      successFlash: "Welcome to Fox Trade"
+      successFlash: "Welcome to Crypto Exchange"
     }), function(req, res){
 });
 // logout route
