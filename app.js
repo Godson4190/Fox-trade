@@ -22,10 +22,10 @@ const dashboardRoutes = require("./routes/dashboards");
 const MongoDBStore = require('connect-mongo')(session);
 
 //Global and local server-connection
-//const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/db_trade-app";
+const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/db_trade-app";
 
 //Local server-connection
-const dbUrl =  "mongodb://localhost:27017/db_trade-app";
+//const dbUrl =  "mongodb://localhost:27017/db_trade-app";
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
